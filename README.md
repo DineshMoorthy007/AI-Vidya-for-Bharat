@@ -4,5 +4,5 @@ An AI-powered, multilingual learning platform democratizing education across Ind
 
 ## Documentation
 
-- **[Requirements Document](.kiro/specs/requirements.md)** - Detailed functional requirements, user stories, and success metrics
-- **[Design Document](.kiro/specs/design.md)** - System architecture, database schema, API design, and implementation plan
+- **[Requirements Document](requirements.md)** - Detailed functional requirements, user stories, and success metrics
+- **[Design Document](design.md)** - System architecture, database schema, API design, and implementation plan
