@@ -130,8 +130,8 @@ ai-vidya-for-bharat/
 
 For detailed product planning and UI/UX decisions, refer to:
 
-- [Design Document](./Design%20and%20Requirements%20files/design.md)
-- [Requirements Document](./Design%20and%20Requirements%20files/requirements.md)
+- [Design Document](./.kiro/specs/ai-vidya-for-bharat/design.md)
+- [Requirements Document](./.kiro/specs/ai-vidya-for-bharat/requirements.md)
 
 ---
 
