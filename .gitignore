@@ -44,3 +44,7 @@ test.js
 backend/test.ts
 backend/test.out
 backend_server.log
+
+# Database
+*.db
+backend/database.db
