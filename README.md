@@ -21,6 +21,7 @@
 - [Mock Data (MVP)](#-mock-data-mvp)
 - [Roadmap](#-roadmap)
 - [Competitive Advantage](#-competitive-advantage)
+- [Demo Script](#-demo-script-for-judges)
 - [Contributing](#-contributing)
 - [License](#-license)
 
@@ -64,6 +65,7 @@ India has **22+ official languages**, a majority of non-English speakers, and li
 | Layer | Technology |
 |---|---|
 | **Frontend** | Next.js 15 (App Router), Tailwind CSS, ShadCN UI |
+| **Backend** | Node.js / Express (REST API) |
 | **Authentication** | Clerk (Mobile OTP) |
 | **Database** | Neon PostgreSQL + Drizzle ORM |
 | **AI Generation** | Google Gemini 1.5 Pro |
@@ -77,51 +79,61 @@ India has **22+ official languages**, a majority of non-English speakers, and li
 ## 📁 Project Structure
 
 ```
-ai-vidya-for-bharat/
-├── app/
-│   ├── layout.tsx              # Global layout (Navbar + Footer)
-│   ├── page.tsx                # Landing page (/)
-│   ├── globals.css             # Design system & CSS variables
-│   ├── dashboard/
-│   │   └── page.tsx            # /dashboard
-│   ├── generate/
-│   │   └── page.tsx            # /generate
-│   ├── course/
-│   │   └── [id]/
-│   │       └── page.tsx        # /course/[id]
-│   ├── ai-guru/
-│   │   └── page.tsx            # /ai-guru
-│   ├── sign-in/
-│   │   └── page.tsx            # /sign-in
-│   └── sign-up/
-│       └── page.tsx            # /sign-up
-├── components/
-│   ├── Navbar.tsx
-│   ├── Footer.tsx
-│   ├── LanguageSelector.tsx
-│   ├── VoiceInputButton.tsx
-│   ├── CourseCard.tsx
-│   ├── ModuleAccordion.tsx
-│   ├── QuizCard.tsx
-│   ├── VideoCard.tsx
-│   ├── AIChatBubble.tsx
-│   ├── LoadingSpinner.tsx
-│   ├── OfflineBadge.tsx
-│   ├── ProBadge.tsx
-│   └── StatsCard.tsx
-├── lib/
-│   ├── mockData.ts             # MVP mock content
-│   ├── gemini.ts               # Gemini AI integration
-│   ├── youtube.ts              # YouTube API helpers
-│   └── db/
-│       ├── schema.ts           # Drizzle schema
-│       └── index.ts            # DB connection
-├── public/
-│   ├── manifest.json           # PWA manifest
-│   └── sw.js                   # Service worker
-├── tailwind.config.ts
-├── drizzle.config.ts
-└── .env.local
+AI-For-Bharat-Hackathon-Prototype-/
+├── frontend/                        # Next.js 15 App
+│   ├── app/
+│   │   ├── layout.tsx               # Global layout (Navbar + Footer)
+│   │   ├── page.tsx                 # Landing page (/)
+│   │   ├── globals.css              # Design system & CSS variables
+│   │   ├── dashboard/
+│   │   │   └── page.tsx             # /dashboard
+│   │   ├── generate/
+│   │   │   └── page.tsx             # /generate
+│   │   ├── course/
+│   │   │   └── [id]/
+│   │   │       └── page.tsx         # /course/[id]
+│   │   ├── ai-guru/
+│   │   │   └── page.tsx             # /ai-guru
+│   │   ├── sign-in/
+│   │   │   └── page.tsx             # /sign-in
+│   │   └── sign-up/
+│   │       └── page.tsx             # /sign-up
+│   ├── components/
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   ├── LanguageSelector.tsx
+│   │   ├── VoiceInputButton.tsx
+│   │   ├── CourseCard.tsx
+│   │   ├── ModuleAccordion.tsx
+│   │   ├── QuizCard.tsx
+│   │   ├── VideoCard.tsx
+│   │   ├── AIChatBubble.tsx
+│   │   ├── LoadingSpinner.tsx
+│   │   ├── OfflineBadge.tsx
+│   │   ├── ProBadge.tsx
+│   │   └── StatsCard.tsx
+│   ├── lib/
+│   │   ├── mockData.ts              # MVP mock content
+│   │   ├── gemini.ts                # Gemini AI integration
+│   │   ├── youtube.ts               # YouTube API helpers
+│   │   └── db/
+│   │       ├── schema.ts            # Drizzle schema
+│   │       └── index.ts             # DB connection
+│   ├── public/
+│   │   ├── manifest.json            # PWA manifest
+│   │   └── sw.js                    # Service worker
+│   ├── tailwind.config.ts
+│   ├── drizzle.config.ts
+│   └── .env.local
+├── backend/                         # Express REST API
+│   └── ...
+├── .kiro/specs/                     # Design & requirements docs
+├── .env.example
+├── .gitignore
+├── IMPLEMENTATION_GUIDE.md
+├── IMPLEMENTATION_SUMMARY.md
+├── QUICK_REFERENCE.md
+└── TESTING_GUIDE.md
 ```
 
 ---
@@ -132,6 +144,9 @@ For detailed product planning and UI/UX decisions, refer to:
 
 - [Design Document](./.kiro/specs/ai-vidya-for-bharat/design.md)
 - [Requirements Document](./.kiro/specs/ai-vidya-for-bharat/requirements.md)
+- [Implementation Guide](./IMPLEMENTATION_GUIDE.md)
+- [Quick Reference](./QUICK_REFERENCE.md)
+- [Testing Guide](./TESTING_GUIDE.md)
 
 ---
 
@@ -172,15 +187,21 @@ Full-screen vernacular chatbot. Supports voice input, language switching mid-cha
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/ai-vidya-for-bharat.git
-cd ai-vidya-for-bharat
+git clone https://github.com/Dhilipkumar-max/AI-For-Bharat-Hackathon-Prototype-.git
+cd AI-For-Bharat-Hackathon-Prototype-
+
+# Set up environment variables
+cp .env.example frontend/.env.local
+# (Fill in your keys — see Environment Variables section)
+```
+
+#### Frontend
+
+```bash
+cd frontend
 
 # Install dependencies
 npm install
-
-# Set up environment variables
-cp .env.example .env.local
-# (Fill in your keys — see Environment Variables section)
 
 # Push database schema
 npx drizzle-kit push
@@ -191,11 +212,23 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to see the app.
 
+#### Backend
+
+```bash
+cd backend
+
+# Install dependencies
+npm install
+
+# Start the backend server
+npm run dev
+```
+
 ---
 
 ## 🔐 Environment Variables
 
-Create a `.env.local` file in the root with the following:
+Create a `.env.local` file inside the `frontend/` directory (or copy from `.env.example`):
 
 ```env
 # Clerk Authentication
@@ -223,25 +256,25 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 | Component | Description |
 |---|---|
-| `<Navbar />` | Sticky top bar with logo, nav links, language selector, auth button |
-| `<Footer />` | Links, socials, tagline, "Made for Bharat" |
-| `<LanguageSelector />` | Dropdown: Hindi, Tamil, Telugu, Bengali, Marathi, Kannada |
-| `<VoiceInputButton />` | Mic button with pulsing animation; uses Web Speech API |
-| `<CourseCard />` | Course title, language badge, module count, pin icon, open button |
-| `<ModuleAccordion />` | Expandable module → lesson list with completion states |
-| `<QuizCard />` | MCQ component with auto-evaluation and score display |
-| `<VideoCard />` | YouTube video card with language tag |
-| `<AIChatBubble />` | Chat bubbles for user and AI Guru messages |
-| `<LoadingSpinner />` | Saffron spinner with optional label |
-| `<OfflineBadge />` | "Saved Offline" indicator badge |
-| `<ProBadge />` | Lock overlay for Pro-only features |
-| `<StatsCard />` | Icon + value + label card for dashboard stats |
+| `Navbar` | Sticky top bar with logo, nav links, language selector, auth button |
+| `Footer` | Links, socials, tagline, "Made for Bharat" |
+| `LanguageSelector` | Dropdown: Hindi, Tamil, Telugu, Bengali, Marathi, Kannada |
+| `VoiceInputButton` | Mic button with pulsing animation; uses Web Speech API |
+| `CourseCard` | Course title, language badge, module count, pin icon, open button |
+| `ModuleAccordion` | Expandable module → lesson list with completion states |
+| `QuizCard` | MCQ component with auto-evaluation and score display |
+| `VideoCard` | YouTube video card with language tag |
+| `AIChatBubble` | Chat bubbles for user and AI Guru messages |
+| `LoadingSpinner` | Saffron spinner with optional label |
+| `OfflineBadge` | "Saved Offline" indicator badge |
+| `ProBadge` | Lock overlay for Pro-only features |
+| `StatsCard` | Icon + value + label card for dashboard stats |
 
 ---
 
 ## 🗃️ Mock Data (MVP)
 
-For the hackathon MVP, all AI content is mocked via `/lib/mockData.ts`. This includes:
+For the hackathon MVP, all AI content is mocked via `frontend/lib/mockData.ts`. This includes:
 
 - 5 sample courses (Hindi, Tamil, Telugu, Bengali, Marathi)
 - Full module + lesson structure in Hindi (Devanagari script)
@@ -250,7 +283,7 @@ For the hackathon MVP, all AI content is mocked via `/lib/mockData.ts`. This inc
 - 6-message AI Guru conversation showing Hinglish code-switching
 - Sample user profile (Ramesh Kumar)
 
-To switch to real AI generation, replace mock calls with the Gemini API integration in `/lib/gemini.ts`.
+To switch to real AI generation, replace mock calls with the Gemini API integration in `frontend/lib/gemini.ts`.
 
 ---
 
@@ -335,5 +368,3 @@ MIT © 2024 AI Vidya for Bharat
 *It is a multilingual AI learning infrastructure designed for India-first digital empowerment.*
 
 </div>
-#   A I - F o r - B h a r a t - H a c k a t h o n - P r o t o t y p e -  
- 
