@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "courses": [
+    {
+      "id": "course-machine-learning-mmhep9bq-txndi",
+      "title": "Machine Learning (en)",
+      "topic": "Machine Learning",
+      "language": "en",
+      "overview": "Machine Learning is explained in a practical, beginner-friendly path with examples and chapter-wise progression in en.",
+      "learning_outcomes": [
+        "Understand the core fundamentals of Machine Learning",
+        "Break down important concepts into easy mental models",
+        "Apply Machine Learning in common real-world scenarios",
+        "Build confidence through progressive chapter exercises"
+      ],
+      "chapters": [
+        {
+          "id": "course-machine-learning-mmhep9bq-txndi-chapter-1",
+          "title": "Introduction to Machine Learning",
+          "content": "Machine Learning starts with understanding why it matters, where it is used, and how beginners can approach it without confusion."
+        },
+        {
+          "id": "course-machine-learning-mmhep9bq-txndi-chapter-2",
+          "title": "Core Concepts of Machine Learning",
+          "content": "This chapter explains the building blocks of Machine Learning with small examples and intuitive step-by-step breakdowns."
+        },
+        {
+          "id": "course-machine-learning-mmhep9bq-txndi-chapter-3",
+          "title": "Practice Applications of Machine Learning",
+          "content": "Use practical scenarios to apply Machine Learning, identify mistakes, and improve with guided practice patterns."
+        },
+        {
+          "id": "course-machine-learning-mmhep9bq-txndi-chapter-4",
+          "title": "Machine Learning in Real Projects",
+          "content": "Learn how Machine Learning appears in real products, how to reason through trade-offs, and how to continue learning independently."
+        }
+      ],
+      "generated_content": "{\"overview\":\"Machine Learning is explained in a practical, beginner-friendly path with examples and chapter-wise progression in en.\",\"learning_outcomes\":[\"Understand the core fundamentals of Machine Learning\",\"Break down important concepts into easy mental models\",\"Apply Machine Learning in common real-world scenarios\",\"Build confidence through progressive chapter exercises\"],\"chapters\":[{\"id\":\"course-machine-learning-mmhep9bq-txndi-chapter-1\",\"title\":\"Introduction to Machine Learning\",\"content\":\"Machine Learning starts with understanding why it matters, where it is used, and how beginners can approach it without confusion.\"},{\"id\":\"course-machine-learning-mmhep9bq-txndi-chapter-2\",\"title\":\"Core Concepts of Machine Learning\",\"content\":\"This chapter explains the building blocks of Machine Learning with small examples and intuitive step-by-step breakdowns.\"},{\"id\":\"course-machine-learning-mmhep9bq-txndi-chapter-3\",\"title\":\"Practice Applications of Machine Learning\",\"content\":\"Use practical scenarios to apply Machine Learning, identify mistakes, and improve with guided practice patterns.\"},{\"id\":\"course-machine-learning-mmhep9bq-txndi-chapter-4\",\"title\":\"Machine Learning in Real Projects\",\"content\":\"Learn how Machine Learning appears in real products, how to reason through trade-offs, and how to continue learning independently.\"}]}",
+      "created_at": "2026-03-08T07:03:59.606Z"
+    }
+  ]
+}

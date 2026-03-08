@@ -1,0 +1,43 @@
+{
+  "name": "ai-vidya-backend",
+  "version": "1.0.0",
+  "description": "Backend Core for AI Vidya for Bharat platform",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --exec ts-node src/index.ts"
+  },
+  "keywords": [
+    "ai",
+    "education",
+    "backend",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.1004.0",
+    "axios": "^1.13.6",
+    "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.7",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.10.6",
+    "@types/supertest": "^6.0.2",
+    "@types/uuid": "^9.0.7",
+    "fast-check": "^3.15.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
